@@ -13,7 +13,6 @@ Soy una analista de ciberseguridad en formación, metódica y rigurosa, comprome
 
 | Proyecto | Descripción |
 |---|---|
-| [Auditoría de seguridad — Botium Toys](./auditoria-botium-toys.md) | Auditoría interna completa: evaluación de controles, cumplimiento (PCI DSS, GDPR, SOC) y recomendaciones priorizadas |
 | [Laboratorio — Metasploitable2](./laboratorio-metasploitable2.md) | Laboratorio propio con Kali Linux y Metasploitable2: reconocimiento con Nmap y explotación de una vulnerabilidad real (bindshell) |
 
 ## Herramientas y conceptos que manejo
