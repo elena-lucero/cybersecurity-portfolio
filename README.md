@@ -1,19 +1,16 @@
-# Portfolio de Ciberseguridad — Elena Lucero
+Cybersecurity Portfolio — Elena Lucero
 
-Analista de ciberseguridad en formación, actualmente completando el Certificado de Ciberseguridad de Google. Este repositorio documenta mis prácticas, proyectos y aprendizaje aplicado en el camino hacia un puesto como SOC Analyst / Blue Team.
+Cybersecurity analyst in training, currently completing the Google Cybersecurity Professional Certificate. This repository documents my practice work, projects, and applied learning on the path toward a SOC Analyst / Blue Team role.
 
-## Sobre mí
+About me
 
-Soy una analista de ciberseguridad en formación, metódica y rigurosa, comprometida con seguir desarrollando mis habilidades técnicas día a día. Aprendo rápido y me adapto cuando algo no sale como esperaba, y me mueve poder ayudar a las personas defendiendo sus vulnerabilidades mediante el monitoreo y análisis constante de riesgos.
+I'm a cybersecurity analyst in training, methodical and thorough, committed to developing my technical skills every day. I learn fast and adapt when things don't go as expected, and I'm driven by helping people defend their vulnerabilities through continuous risk monitoring and analysis.
 
-## Certificaciones en curso
-- Google Cybersecurity Professional Certificate (en progreso — 2/8 cursos completados)
+Certifications in progress
+Google Cybersecurity Professional Certificate (in progress — 2/8 courses completed)
+Projects
+Project	Description
+Home Lab — Metasploitable2	Own lab with Kali Linux and Metasploitable2: reconnaissance with Nmap and exploitation of a real vulnerability (bindshell)
+Tools and concepts I work with
 
-## Proyectos
-
-| Proyecto | Descripción |
-|---|---|
-| [Laboratorio — Metasploitable2](./laboratorio-metasploitable2.md) | Laboratorio propio con Kali Linux y Metasploitable2: reconocimiento con Nmap y explotación de una vulnerabilidad real (bindshell) |
-
-## Herramientas y conceptos que manejo
-Nmap · Kali Linux · Wireshark (en progreso) · Línea de comandos Linux · Tríada CIA · NIST CSF · Marcos de cumplimiento (GDPR, PCI DSS, HIPAA) · SIEM (Splunk, Chronicle)
+Nmap · Kali Linux · Wireshark (in progress) · Linux command line · CIA Triad · NIST CSF · Compliance frameworks (GDPR, PCI DSS, HIPAA) · SIEM (Splunk, Chronicle)
