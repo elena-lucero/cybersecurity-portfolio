@@ -15,7 +15,8 @@ I'm a cybersecurity analyst in training, methodical and thorough, committed to d
 | Project | Description |
 |---|---|
 | [Home Lab — Metasploitable2](./laboratorio-metasploitable2.md) | Own lab with Kali Linux and Metasploitable2: reconnaissance with Nmap and exploitation of a real vulnerability (bindshell) |
+| [Home Lab — Raspberry Pi](./laboratorio-raspberry-pi.md) | Own home server built from scratch: network-wide ad and tracker blocking with Pi-hole, a self-hosted WireGuard VPN, hardening (firewall, SSH keys, automatic updates) and an alert for unknown devices on the network |
 
 ## Tools and concepts I work with
 
-Nmap · Kali Linux · Wireshark (in progress) · Linux command line · CIA Triad · NIST CSF · Compliance frameworks (GDPR, PCI DSS, HIPAA) · SIEM (Splunk, Chronicle)
+Nmap · Kali Linux · Wireshark (in progress) · Linux command line · Pi-hole · WireGuard · ufw · DNS · CIA Triad · NIST CSF · Compliance frameworks (GDPR, PCI DSS, HIPAA) · SIEM (Splunk, Chronicle)
