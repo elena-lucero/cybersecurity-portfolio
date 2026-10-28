@@ -1,6 +1,9 @@
 ## Práctica: Raspberry Pi 5 como servidor de seguridad para casa (Pi-hole + VPN WireGuard)
+
 **Fecha:** 25/10/2026
+
 **Objetivo:** Montar desde cero un pequeño servidor casero que bloquee anuncios y rastreadores en mis aparatos, me dé una VPN propia para usar fuera de casa, esté protegido (cortafuegos, actualizaciones, acceso por llave) y me avise si se conecta un aparato desconocido a mi red.
+
 **Permiso obtenido de:** Red y aparatos propios. Mi pareja, con quien comparto la red, está informado y de acuerdo.
 
 **Material:** Raspberry Pi 5 (1 GB) en kit con caja, ventilador, disipadores, cargador de 27 W y microSD de 64 GB · MacBook Air · router Bbox Wi-Fi 6 de Bouygues Telecom.
