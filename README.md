@@ -8,7 +8,7 @@ I'm a cybersecurity analyst in training, methodical and thorough, committed to d
 
 ## Certifications in progress
 
-- Google Cybersecurity Professional Certificate (in progress — 2/8 courses completed)
+- Google Cybersecurity Professional Certificate (in progress — 4/8 courses completed)
 
 ## Projects
 
