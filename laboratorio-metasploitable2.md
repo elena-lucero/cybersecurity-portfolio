@@ -1,6 +1,7 @@
 # Home Lab: Reconnaissance and Exploitation with Metasploitable2
 
 **Date:** September 29, 2026
+
 **Tools:** Kali Linux, Metasploitable2, UTM (virtualization), Nmap, Netcat
 
 ## Objective
