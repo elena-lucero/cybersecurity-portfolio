@@ -6,10 +6,6 @@ Cybersecurity analyst in training, currently completing the Google Cybersecurity
 
 I'm a cybersecurity analyst in training, methodical and thorough, committed to developing my technical skills every day. I learn fast and adapt when things don't go as expected, and I'm driven by helping people defend their vulnerabilities through continuous risk monitoring and analysis.
 
-## Certifications in progress
-
-- Google Cybersecurity Professional Certificate (in progress — 4/8 courses completed)
-
 ## Projects
 
 | Project | Description |
