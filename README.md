@@ -1,10 +1,10 @@
 # Cybersecurity Portfolio — Elena Lucero
 
-Cybersecurity analyst in training, currently completing the Google Cybersecurity Professional Certificate. This repository documents my practice work, projects, and applied learning on the path toward a SOC Analyst / Blue Team role.
+This repository documents my practice work, projects, and applied learning on the path toward a SOC Analyst / Blue Team role.
 
 ## About me
 
-I'm a cybersecurity analyst in training, methodical and thorough, committed to developing my technical skills every day. I learn fast and adapt when things don't go as expected, and I'm driven by helping people defend their vulnerabilities through continuous risk monitoring and analysis.
+I'm a cybersecurity student, methodical and thorough, committed to developing my technical skills every day. I learn fast and adapt when things don't go as expected, and I'm driven by helping people defend their vulnerabilities through continuous risk monitoring and analysis.
 
 ## Projects
 
