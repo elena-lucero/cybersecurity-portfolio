@@ -16,7 +16,6 @@ I'm a cybersecurity analyst in training, methodical and thorough, committed to d
 |---|---|
 | [Home Lab — Metasploitable2](./laboratorio-metasploitable2.md) | Own lab with Kali Linux and Metasploitable2: reconnaissance with Nmap and exploitation of a real vulnerability (bindshell) |
 | [Home Lab — Raspberry Pi](./raspberry-pi-pihole-vpn.md) | Own home server built from scratch: network-wide ad and tracker blocking with Pi-hole, a self-hosted WireGuard VPN, hardening (firewall, SSH keys, automatic updates) and an alert for unknown devices on the network |
-| [Antes de hacer click](./antes-de-hacer-click.md) | Interactive scam-prevention platform for people over 60 (in design): realistic simulations of fraudulent calls, messages and websites, adapted to how older adults process information |
 
 ## Tools and concepts I work with
 
