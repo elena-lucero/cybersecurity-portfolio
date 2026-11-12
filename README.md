@@ -15,4 +15,4 @@ I'm a cybersecurity student, methodical and thorough, committed to developing my
 
 ## Tools and concepts I work with
 
-Nmap · Kali Linux · Wireshark (in progress) · Linux command line · Pi-hole · WireGuard · ufw · DNS · CIA Triad · NIST CSF · Compliance frameworks (GDPR, PCI DSS, HIPAA) · SIEM (Splunk, Chronicle)
+Kali Linux · Wireshark · Linux command line · Pi-hole · WireGuard · ufw · DNS · CIA Triad · NIST CSF · Compliance frameworks (GDPR, PCI DSS, HIPAA) · SIEM (Splunk, Chronicle) · SQL
