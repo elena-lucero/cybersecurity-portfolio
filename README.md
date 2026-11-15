@@ -58,6 +58,14 @@ en   English    intermediate
 de   German     learning
 ```
 
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+
+## `$ ./aquarium.sh`
+
+<p align="center">
+  <img src="aquarium.svg" width="100%" alt="ASCII fish swimming with bubbles">
+</p>
+
 <br>
 
 <p align="center">
