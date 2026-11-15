@@ -2,7 +2,18 @@
 
 **Date:** October 25, 2026
 
-**Tools:** Raspberry Pi 5, Raspberry Pi OS Lite, Pi-hole, WireGuard, UFW, SSH, arp-scan, ntfy
+## Tools & Technologies
+
+| Category | Tools & Technologies |
+|---|---|
+| Hardware | Raspberry Pi 5 (1 GB), MacBook Air, Bbox Wi-Fi 6 Router |
+| Operating System | Raspberry Pi OS Lite (64-bit) |
+| System Setup | Raspberry Pi Imager, NetworkManager, `nmcli` |
+| DNS & Ad Blocking | Pi-hole, Quad9, StevenBlack Blocklist |
+| VPN & Networking | WireGuard, `iptables`, `qrencode` |
+| System Security | UFW, SSH, SSH Keys, unattended-upgrades |
+| Network Monitoring | arp-scan, Cron, ntfy |
+| Backup & Administration | `scp`, Pi-hole Teleporter, Linux command line |
 
 ## Objective
 
