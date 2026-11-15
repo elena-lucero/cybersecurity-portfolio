@@ -27,12 +27,24 @@ path      : Blue Team → SOC → Cloud Security
 
 ## `$ ls ./labs`
 
-| Lab | What I did |
-|---|---|
-| [**Metasploitable2 lab**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/home-lab-metasploitable2.md) | Isolated network in UTM with Kali + Metasploitable2 |
-| [**Home Lab · Raspberry Pi**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/raspberry-pi-pihole-vpn.md) | Pi-hole + WireGuard VPN for my own devices |
-
-<p align="right"><a href="https://github.com/khalehna/cybersecurity-portfolio">→ full write-ups in my portfolio</a></p>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <sub><code>LAB 01</code></sub>
+      <h3>Metasploitable2 Lab</h3>
+      <p>Kali LAB and Metasploitable2 on an isolated host-only network in UTM: a safe space to practise.</p>
+      <p><code>UTM</code> <code>Kali Linux</code> <code>Metasploitable2</code></p>
+      <a href="https://github.com/khalehna/cybersecurity-portfolio/blob/main/home-lab-metasploitable2.md"><b>Read write-up →</b></a>
+    </td>
+    <td width="50%" valign="top">
+      <sub><code>LAB 02</code></sub>
+      <h3>Home Lab · Raspberry Pi</h3>
+      <p>Pi-hole as DNS filter for my own devices, reachable from outside home through a WireGuard VPN.</p>
+      <p><code>Raspberry Pi</code> <code>Pi-hole</code> <code>WireGuard</code></p>
+      <a href="https://github.com/khalehna/cybersecurity-portfolio/blob/main/raspberry-pi-pihole-vpn.md"><b>Read write-up →</b></a>
+    </td>
+  </tr>
+</table>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
@@ -60,10 +72,6 @@ action  : say hi on LinkedIn
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=khalehna&label=VISITORS&color=0D1117&style=for-the-badge" alt="Visitors">
-</p>
-
-<p align="center">
-  <img src="mermaid.svg" width="100%" alt="Neon mermaid swimming through digital waves">
 </p>
 
 <p align="center">
