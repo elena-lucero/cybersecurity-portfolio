@@ -1,6 +1,5 @@
-<!-- Banner: sube banner_linkedin_elena.png a este mismo repositorio -->
 <p align="center">
-  <img src="banner_linkedin_elena.png" alt="Elena Lucero · Cybersecurity · Blue Team" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3EC6D6,100:0D1117&height=200&section=header&text=Elena%20Lucero&fontSize=56&fontColor=F0F6FC&fontAlignY=36&desc=Cybersecurity%20%C2%B7%20Blue%20Team&descSize=18&descAlignY=58&descColor=F0F6FC" width="100%" alt="Elena Lucero · Cybersecurity · Blue Team">
 </p>
 
 <p align="center">
@@ -67,6 +66,10 @@ mindset   : Started by caring for people, now I protect them online.
 <p align="right"><a href="https://github.com/khalehna/cybersecurity-portfolio">→ full write-ups in my portfolio</a></p>
 
 <br>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=110&section=footer" width="100%" alt="footer">
+</p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=110&section=footer" width="100%" alt="footer">
