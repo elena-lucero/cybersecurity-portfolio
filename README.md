@@ -1,10 +1,12 @@
 # Cybersecurity Portfolio — Elena Lucero
 
-This repository documents my practice work, projects, and applied learning on the path toward a SOC Analyst / Blue Team role.
+This repository documents my hands-on cybersecurity projects and technical learning.
 
 ## About me
 
-I'm a cybersecurity student, methodical and thorough, committed to developing my technical skills every day. I learn fast and adapt when things don't go as expected, and I'm driven by helping people defend their vulnerabilities through continuous risk monitoring and analysis.
+I'm a cybersecurity student focused on Blue Team.
+I'm building my skills through courses, hands-on labs and personal projects.
+I enjoy solving problems, understanding how systems work and finding ways to make them more secure.
 
 ## Projects
 
