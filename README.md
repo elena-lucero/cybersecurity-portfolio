@@ -13,7 +13,7 @@
   <a href="https://github.com/khalehna/cybersecurity-portfolio"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Portfolio"></a>
 </p>
 
-<br>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ whoami`
 
@@ -24,18 +24,7 @@ focus     : Blue Team · SOC · Detection & Response
 mindset   : Started by caring for people, now I protect them online.
 ```
 
-<br>
-
-## `$ cat roadmap.log`
-
-```text
-[■■■■■■■■■■■■■■■■■■■■■■□□□□□□□□]  Google Cybersecurity Certificate      6/8 courses
-[■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□]  Cisco Junior Cybersecurity Analyst     in progress
-[□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□]  CompTIA Security+                      next step
-[□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□]  Home Lab SOC · Wazuh + MITRE ATT&CK   planned
-```
-
-<br>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ ls ./toolbox`
 
@@ -52,7 +41,7 @@ mindset   : Started by caring for people, now I protect them online.
   <img src="https://img.shields.io/badge/WireGuard-0D1117?style=for-the-badge&logo=wireguard&logoColor=3EC6D6" alt="WireGuard">
 </p>
 
-<br>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ ls ./labs`
 
@@ -60,16 +49,30 @@ mindset   : Started by caring for people, now I protect them online.
 |---|---|
 | **Metasploitable2 lab** | Isolated network in UTM with Kali + Metasploitable2 |
 | **Home Lab · Raspberry Pi** | Pi-hole + WireGuard VPN for my own devices |
-| **HTB · Cap** | Traffic analysis with Wireshark → credential reuse → privilege escalation |
-| **HTB · Lame** | Vulnerable Samba service (CVE-2007-2447) exploited with Metasploit |
 
 <p align="right"><a href="https://github.com/khalehna/cybersecurity-portfolio">→ full write-ups in my portfolio</a></p>
 
-<br>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=110&section=footer" width="100%" alt="footer">
-</p>
+## `$ locale`
+
+```text
+es   Spanish    native
+it   Italian    bilingual
+ca   Catalan    advanced
+en   English    intermediate
+de   German     learning
+```
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+
+## `$ cat beyond_the_terminal.txt`
+
+```text
+Digital illustration · Procreate
+```
+
+<br>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=110&section=footer" width="100%" alt="footer">
