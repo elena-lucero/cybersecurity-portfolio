@@ -2,7 +2,15 @@
 
 **Date:** September 29, 2026
 
-**Tools:** Kali Linux, Metasploitable2, UTM, Nmap, Netcat
+## Tools & Technologies
+
+| Category | Tools |
+|---|---|
+| Operating Systems | Kali Linux, Metasploitable2 |
+| Virtualization | UTM, QEMU |
+| Network Scanning | Nmap |
+| Network Connections | Netcat |
+| Linux Commands | `ping`, `whoami`, `cat`, `qemu-img` |
 
 ## Objective
 
