@@ -6,7 +6,7 @@ This repository shows my practical projects and learning progress in cybersecuri
 
 ## About Me
 
-I'm a cybersecurity student focused on Blue Team, with the goal of becoming a SOC Analyst.
+I'm a cybersecurity student focused on Blue Team.
 
 I'm building my skills through courses, hands-on labs and personal projects.
 
