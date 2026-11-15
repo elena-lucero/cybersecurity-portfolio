@@ -32,21 +32,6 @@ path      : Blue Team → SOC → Cloud Security
 | [**Metasploitable2 lab**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/home-lab-metasploitable2.md) | Isolated network in UTM with Kali + Metasploitable2 |
 | [**Home Lab · Raspberry Pi**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/raspberry-pi-pihole-vpn.md) | Pi-hole + WireGuard VPN for my own devices |
 
-```mermaid
-flowchart LR
-  subgraph UTM["UTM · isolated host-only network"]
-    K["Kali LAB"] --- M["Metasploitable2"]
-  end
-  subgraph HOME["Home network"]
-    D["My devices"] -->|DNS| P["Raspberry Pi · Pi-hole"]
-    O["Outside home"] -.->|WireGuard VPN| P
-  end
-  classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
-  class K,M,D,P,O node
-  style UTM fill:transparent,stroke:#3EC6D6,stroke-dasharray:4 4,color:#3EC6D6
-  style HOME fill:transparent,stroke:#3EC6D6,stroke-dasharray:4 4,color:#3EC6D6
-```
-
 <p align="right"><a href="https://github.com/khalehna/cybersecurity-portfolio">→ full write-ups in my portfolio</a></p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
@@ -75,6 +60,10 @@ action  : say hi on LinkedIn
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=khalehna&label=VISITORS&color=0D1117&style=for-the-badge" alt="Visitors">
+</p>
+
+<p align="center">
+  <img src="mermaid.svg" width="100%" alt="Neon mermaid swimming through digital waves">
 </p>
 
 <p align="center">
