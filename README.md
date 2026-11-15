@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=900&color=3EC6D6&center=true&vCenter=true&width=600&lines=Aspiring+SOC+Analyst;Blue+Team+%C2%B7+Detection+%C2%B7+Response;Learning+by+doing%2C+one+lab+at+a+time" alt="Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=900&color=3EC6D6&center=true&vCenter=true&width=600&lines=Aspiring+SOC+Analyst;Blue+Team+%C2%B7+SOC+%C2%B7+Cloud+Security;Learning+by+doing%2C+one+lab+at+a+time" alt="Typing SVG">
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 ```text
 name      : Elena Lucero
 location  : Basel area
-focus     : Blue Team · SOC · Detection & Response
+focus     : Blue Team · SOC · Cloud Security
 mindset   : Started by caring for people, now I protect them online.
 ```
 
@@ -62,14 +62,6 @@ it   Italian    bilingual
 ca   Catalan    advanced
 en   English    intermediate
 de   German     learning
-```
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
-
-## `$ cat beyond_the_terminal.txt`
-
-```text
-Digital illustration · Procreate
 ```
 
 <br>
