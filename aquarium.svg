@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" width="800" height="170">
+  <style>
+    text { font-family: "Fira Code", "Courier New", monospace; fill: #3EC6D6; white-space: pre; }
+    .fish { font-size: 22px; }
+    .wave { font-size: 18px; opacity: .7; }
+    .bub  { font-size: 16px; opacity: 0; }
+
+    .f1 { animation: right 14s linear infinite; }
+    .f2 { animation: left 18s linear infinite; }
+    .bob1 { animation: bob 2.2s ease-in-out infinite; }
+    .bob2 { animation: bob 2.8s ease-in-out infinite; }
+    .waves { animation: flow 6s linear infinite; }
+
+    .b { animation: rise 3.6s ease-in infinite; }
+    .d1 { animation-delay: .4s; } .d2 { animation-delay: 1.1s; } .d3 { animation-delay: 1.8s; }
+    .d4 { animation-delay: 2.5s; } .d5 { animation-delay: 3.0s; }
+
+    @keyframes right { from { transform: translateX(-140px); } to { transform: translateX(860px); } }
+    @keyframes left  { from { transform: translateX(860px); }  to { transform: translateX(-140px); } }
+    @keyframes bob   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes flow  { from { transform: translateX(0); } to { transform: translateX(-21.6px); } }
+    @keyframes rise  {
+      0%   { opacity: 0;  transform: translateY(0); }
+      15%  { opacity: .9; }
+      100% { opacity: 0;  transform: translateY(-90px); }
+    }
+  </style>
+
+  <!-- pez 1: nada hacia la derecha, con burbujas que le siguen -->
+  <g class="f1">
+    <g class="bob1">
+      <text class="fish" x="0" y="70">&gt;&lt;(((º&gt;</text>
+      <text class="bub b"    x="96"  y="62">o</text>
+      <text class="bub b d2" x="104" y="56">°</text>
+      <text class="bub b d4" x="92"  y="50">o</text>
+    </g>
+  </g>
+
+  <!-- pez 2: nada hacia la izquierda, un poco más abajo -->
+  <g class="f2">
+    <g class="bob2">
+      <text class="fish" x="0" y="112">&lt;º)))&gt;&lt;</text>
+      <text class="bub b d1" x="-14" y="104">°</text>
+      <text class="bub b d3" x="-8"  y="96">o</text>
+      <text class="bub b d5" x="-18" y="90">°</text>
+    </g>
+  </g>
+
+  <!-- olas -->
+  <g class="waves">
+    <text class="wave" x="0" y="150">~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~</text>
+  </g>
+</svg>
