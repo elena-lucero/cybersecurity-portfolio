@@ -58,17 +58,7 @@ en   English    intermediate
 de   German     learning
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
-
-## `$ tail -f alerts.log`
-
-```text
-[ALERT]   new visitor detected
-source  : github.com/khalehna
-severity: friendly
-status  : no threat found
-action  : say hi on LinkedIn
-```
+<br>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=khalehna&label=VISITORS&color=0D1117&style=for-the-badge" alt="Visitors">
