@@ -16,5 +16,5 @@ I enjoy solving problems, understanding how systems work and finding ways to mak
 
 | Project | Description |
 |---|---|
-| [Home Lab — Metasploitable2](./laboratorio-metasploitable2.md) | Built an isolated lab with Kali Linux and Metasploitable2. Used Nmap to scan the network and Netcat to test an insecure service that allowed root access. |
+| [Home Lab — Metasploitable2](./home-lab-metasploitable2.md) | Built an isolated lab with Kali Linux and Metasploitable2. Used Nmap to scan the network and Netcat to test an insecure service that allowed root access. |
 | [Home Lab — Raspberry Pi](./raspberry-pi-pihole-vpn.md) | Built a home security server with Pi-hole and WireGuard VPN. Configured a firewall, SSH keys, automatic updates and alerts for unknown devices. |
