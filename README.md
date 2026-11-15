@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=900&color=3EC6D6&center=true&vCenter=true&width=600&lines=Aspiring+SOC+Analyst;Blue+Team+%C2%B7+SOC+%C2%B7+Cloud+Security;Learning+by+doing%2C+one+lab+at+a+time" alt="Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=900&color=3EC6D6&center=true&vCenter=true&width=600&lines=Aspiring+SOC+Analyst;Path%3A+Blue+Team+%E2%86%92+SOC+%E2%86%92+Cloud+Security;Learning+by+doing%2C+one+lab+at+a+time" alt="Typing SVG">
 </p>
 
 <p align="center">
@@ -20,26 +20,8 @@
 ```text
 name      : Elena Lucero
 location  : Basel area
-focus     : Blue Team · SOC · Cloud Security
-mindset   : Started by caring for people, now I protect them online.
+path      : Blue Team → SOC → Cloud Security
 ```
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
-
-## `$ ls ./toolbox`
-
-<p>
-  <img src="https://img.shields.io/badge/Kali_Linux-0D1117?style=for-the-badge&logo=kalilinux&logoColor=3EC6D6" alt="Kali Linux">
-  <img src="https://img.shields.io/badge/Linux-0D1117?style=for-the-badge&logo=linux&logoColor=3EC6D6" alt="Linux">
-  <img src="https://img.shields.io/badge/Bash-0D1117?style=for-the-badge&logo=gnubash&logoColor=3EC6D6" alt="Bash">
-  <img src="https://img.shields.io/badge/SQL-0D1117?style=for-the-badge" alt="SQL">
-  <img src="https://img.shields.io/badge/Python_(learning)-0D1117?style=for-the-badge&logo=python&logoColor=3EC6D6" alt="Python">
-  <br>
-  <img src="https://img.shields.io/badge/Wireshark-0D1117?style=for-the-badge&logo=wireshark&logoColor=3EC6D6" alt="Wireshark">
-  <img src="https://img.shields.io/badge/Metasploit-0D1117?style=for-the-badge&logo=metasploit&logoColor=3EC6D6" alt="Metasploit">
-  <img src="https://img.shields.io/badge/Raspberry_Pi-0D1117?style=for-the-badge&logo=raspberrypi&logoColor=3EC6D6" alt="Raspberry Pi">
-  <img src="https://img.shields.io/badge/WireGuard-0D1117?style=for-the-badge&logo=wireguard&logoColor=3EC6D6" alt="WireGuard">
-</p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
@@ -49,6 +31,21 @@ mindset   : Started by caring for people, now I protect them online.
 |---|---|
 | [**Metasploitable2 lab**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/home-lab-metasploitable2.md) | Isolated network in UTM with Kali + Metasploitable2 |
 | [**Home Lab · Raspberry Pi**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/raspberry-pi-pihole-vpn.md) | Pi-hole + WireGuard VPN for my own devices |
+
+```mermaid
+flowchart LR
+  subgraph UTM["UTM · isolated host-only network"]
+    K["Kali LAB"] --- M["Metasploitable2"]
+  end
+  subgraph HOME["Home network"]
+    D["My devices"] -->|DNS| P["Raspberry Pi · Pi-hole"]
+    O["Outside home"] -.->|WireGuard VPN| P
+  end
+  classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
+  class K,M,D,P,O node
+  style UTM fill:transparent,stroke:#3EC6D6,stroke-dasharray:4 4,color:#3EC6D6
+  style HOME fill:transparent,stroke:#3EC6D6,stroke-dasharray:4 4,color:#3EC6D6
+```
 
 <p align="right"><a href="https://github.com/khalehna/cybersecurity-portfolio">→ full write-ups in my portfolio</a></p>
 
@@ -64,7 +61,17 @@ en   English    intermediate
 de   German     learning
 ```
 
-<br>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+
+## `$ tail -f alerts.log`
+
+```text
+[ALERT]   new visitor detected
+source  : github.com/khalehna
+severity: friendly
+status  : no threat found
+action  : say hi on LinkedIn
+```
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=khalehna&label=VISITORS&color=0D1117&style=for-the-badge" alt="Visitors">
