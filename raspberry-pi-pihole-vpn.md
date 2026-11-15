@@ -1,54 +1,122 @@
-## Practice: Raspberry Pi 5 as a Home Security Server (Pi-hole + WireGuard VPN)
+# Home Lab: Raspberry Pi 5 Home Security Server (Pi-hole + WireGuard VPN)
 
-**Date:** 25/10/2026
+**Date:** October 25, 2026
 
-**Objective:** Set up a small home server from scratch to block ads and trackers on my devices, provide my own VPN to use when I'm away from home, keep it secure (firewall, updates, key-based access), and notify me if an unknown device connects to my network.
+**Tools:** Raspberry Pi 5, Raspberry Pi OS Lite, Pi-hole, WireGuard, UFW, SSH, arp-scan, ntfy
 
-**Permission obtained from:** My own network and devices.
+## Objective
 
-**Equipment:** Raspberry Pi 5 (1 GB) kit with case, fan, heatsinks, 27 W power supply, and 64 GB microSD card · MacBook Air · Bouygues Telecom Bbox Wi-Fi 6 router.
+Build my own home server using a Raspberry Pi 5.
+
+The main goals were:
+
+- Block ads and trackers on my devices using Pi-hole.
+- Set up a personal VPN to connect safely when I'm away from home.
+- Improve server security with a firewall, automatic updates and SSH keys.
+- Get alerts when an unknown device connects to my network.
+
+**Environment:** My own home network and devices.
+
+**Equipment:** Raspberry Pi 5 (1 GB), case, fan, heatsinks, 27 W power supply, 64 GB microSD card, MacBook Air and Bouygues Telecom Bbox Wi-Fi 6 router.
 
 ---
 
-### Steps and commands
+## 1. Raspberry Pi Setup
 
-**1. Assembly and operating system installation**
-- Assembled the board inside the case with the fan. I only installed one small heatsink because the others interfered with the fan.
-- Installed **Raspberry Pi OS Lite (64-bit)**, without a desktop environment, using Raspberry Pi Imager, with SSH enabled and a wired connection.
-- Connected from my Mac and updated the system:
+I assembled the Raspberry Pi inside its case and installed the fan.
+
+I could only install one small heatsink because the others were too close to the fan.
+
+I installed **Raspberry Pi OS Lite (64-bit)** using Raspberry Pi Imager.
+
+I chose this version because it does not need a desktop interface.
+
+I enabled SSH and connected the Raspberry Pi to my router with an Ethernet cable.
+
+Then, I connected from my Mac and updated the system.
+
 ```bash
 ssh <usuario>@<nombre-raspberry>.local
 sudo apt update && sudo apt full-upgrade -y
 sudo reboot
 ```
 
-**2. Pi-hole (blocking ads and trackers through DNS)**
+## 2. Pi-hole: Blocking Ads and Trackers
+
+I installed Pi-hole to block ads and trackers using DNS.
+
 ```bash
 curl -sSL https://install.pi-hole.net | bash
 sudo pihole setpassword
 ```
-- Upstream DNS: **Quad9 (filtered, DNSSEC)**. Blocklist: **StevenBlack**, around 71,000 domains.
-- I use it **only on the devices I choose** (Mac, iPhone, TV), manually changing their DNS settings to the Raspberry Pi's IP address.
-- Added a **local DNS record** in Pi-hole so the router's administration page would still work (`mabbox.bytel.fr → 192.168.1.254`).
 
-**3. Static IP address for the Raspberry Pi**
-- On the Raspberry Pi itself (NetworkManager):
+**Configuration:**
+
+- **DNS provider:** Quad9 (filtered, with DNSSEC).
+- **Blocklist:** StevenBlack, with around 71,000 domains.
+- **Devices:** Mac, iPhone and Samsung TV.
+
+I manually changed the DNS settings on these devices to use my Raspberry Pi's IP address.
+
+I did not change the DNS settings for the whole network.
+
+### Problem: Router Page Not Working
+
+After using Pi-hole, I could not open my router's settings page.
+
+The router used a local name that Pi-hole did not know.
+
+**Solution:**
+
+I added a local DNS record in Pi-hole:
+
+`mabbox.bytel.fr → 192.168.1.254`
+
+I also cleared the DNS cache on my Mac.
+
+After this change, I could open the router's settings page again.
+
+## 3. Static IP Address
+
+I wanted my Raspberry Pi to keep the same IP address.
+
+I configured a static IP address using NetworkManager.
+
 ```bash
 sudo nmcli connection modify "Wired connection 1" ipv4.method manual \
   ipv4.addresses 192.168.1.158/24 ipv4.gateway 192.168.1.254 \
   ipv4.dns "9.9.9.9 149.112.112.112"
 sudo nmcli connection up "Wired connection 1"
 ```
-- On the router: **static IP reservation** (DHCP) for the Raspberry Pi's MAC address.
 
-**4. WireGuard VPN, configured manually**
-- Used WireGuard without automated installers (PiVPN stopped being maintained in 2024).
+I also reserved the same IP address on my router using the Raspberry Pi's MAC address.
+
+**Result:** The Raspberry Pi uses `192.168.1.158`.
+
+## 4. WireGuard VPN Setup
+
+I installed WireGuard to access my home network when I'm away.
+
+I configured it manually without using automatic installation tools.
+
 ```bash
 sudo apt install -y wireguard qrencode iptables
-# Key pairs for the server and phone (readable only by root)
+```
+
+### Creating Security Keys
+
+I created separate keys for the server and my iPhone.
+
+```bash
 sudo sh -c 'umask 077; cd /etc/wireguard; wg genkey | tee servidor.key | wg pubkey > servidor.pub; wg genkey | tee iphone.key | wg pubkey > iphone.pub'
 ```
-- `/etc/wireguard/wg0.conf` (server):
+
+The private keys were protected so only root could read them.
+
+### Server Configuration
+
+File: `/etc/wireguard/wg0.conf`
+
 ```ini
 [Interface]
 Address = 10.8.0.1/24
@@ -62,28 +130,75 @@ PostDown = iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
 PublicKey = <iPhone public key>
 AllowedIPs = 10.8.0.2/32
 ```
+
+I enabled IP forwarding and started WireGuard.
+
 ```bash
 echo 'net.ipv4.ip_forward=1' | sudo tee /etc/sysctl.d/99-wireguard.conf
 sudo sysctl -p /etc/sysctl.d/99-wireguard.conf
 sudo systemctl enable --now wg-quick@wg0
 sudo wg show
 ```
-- **Port forwarding on the router:** UDP, external port `20000` → port `51820` on the Raspberry Pi. The router only allowed ports between 16384 and 24575 because the ISP **shares public IPv4 addresses among multiple customers** and assigns specific port ranges.
-- Generated the phone's configuration as a **QR code** (`qrencode`) with `DNS = 10.8.0.1`, so I can also use Pi-hole when I'm away from home.
-- In the WireGuard app on my iPhone: **automatic activation** on mobile data and on any Wi-Fi network except my home network.
 
-**5. Security hardening**
-- **SSH key authentication** from my Mac (I also kept password authentication as a backup):
+### Router Port Forwarding
+
+I opened one UDP port on my router:
+
+- **External port:** 20000
+- **Internal port:** 51820
+- **Destination:** Raspberry Pi
+
+My internet provider shares public IPv4 addresses between customers.
+
+Because of this, my router only allowed external ports between 16384 and 24575.
+
+### iPhone Configuration
+
+I created a QR code using `qrencode` to add the VPN to my iPhone.
+
+I configured:
+
+`DNS = 10.8.0.1`
+
+This allows my iPhone to use Pi-hole when I'm away from home.
+
+I also enabled automatic VPN connection:
+
+- When using mobile data.
+- When connecting to Wi-Fi networks outside my home.
+
+## 5. Server Security
+
+I added several security settings to protect my Raspberry Pi.
+
+### SSH Keys
+
+I created an SSH key on my Mac.
+
 ```bash
 ssh-keygen -t ed25519 -C "mac"
 ssh-copy-id <usuario>@<nombre-raspberry>.local
 ```
-- **Automatic security updates:**
+
+I kept password login as a backup.
+
+### Automatic Updates
+
+I installed automatic security updates.
+
 ```bash
 sudo apt install -y unattended-upgrades
-cat /etc/apt/apt.conf.d/20auto-upgrades   # both lines must end in "1"
+cat /etc/apt/apt.conf.d/20auto-upgrades
 ```
-- **Firewall (ufw):** everything blocked by default except what's necessary:
+
+I checked that both settings were enabled with `1`.
+
+### Firewall (UFW)
+
+I configured the firewall to block incoming connections by default.
+
+I only allowed the ports needed for my services.
+
 ```bash
 sudo apt install -y ufw
 sudo ufw default deny incoming
@@ -97,39 +212,187 @@ sudo ufw route allow in on wg0 out on eth0 comment 'VPN a internet'
 sudo ufw enable
 sudo ufw status verbose
 ```
-- **Backups:** exported Pi-hole settings (Settings → Teleporter) and copied `/etc/wireguard` to my Mac using `scp`.
 
-**6. Intruder alert system**
-- A script that runs an `arp-scan` every 5 minutes (cron), compares MAC addresses against a list of known devices, and, if a new one appears, logs it and sends a notification to my phone through **ntfy**.
+### Backups
+
+I saved a backup of my Pi-hole settings using **Settings → Teleporter**.
+
+I also copied the `/etc/wireguard` configuration folder to my Mac using `scp`.
+
+## 6. Unknown Device Alerts
+
+I created a system to detect unknown devices on my network.
+
+The system uses:
+
+- **arp-scan:** Finds devices connected to the local network.
+- **Cron:** Runs the script every five minutes.
+- **ntfy:** Sends notifications to my phone.
+
+The script compares the MAC addresses it finds with a list of known devices.
+
+If it finds a new MAC address, it saves the information and sends an alert.
+
 ```bash
 sudo apt install -y arp-scan cron
 sudo arp-scan --localnet --quiet --plain
-# Run every 5 minutes
+```
+
+I configured the script to run every five minutes.
+
+```bash
 echo '*/5 * * * * root /usr/local/bin/alarma-intrusos.sh' | sudo tee /etc/cron.d/alarma-intrusos
 ```
 
-**7. Network inventory**
+**Result:** The system detected my Samsung TV when it connected for the first time.
+
+It sent only one notification for the new device.
+
+## 7. Network Inventory
+
+I used arp-scan to check the devices on my network.
+
 ```bash
-cd /tmp && sudo arp-scan --localnet   # also shows the manufacturer of each MAC address
+cd /tmp && sudo arp-scan --localnet
 ```
-- Identified the unknown devices (three with the same MAC address prefix and no recognized manufacturer) **by unplugging devices one by one** and checking which one disappeared.
+
+The scan showed IP addresses, MAC addresses and available manufacturer information.
+
+I found three unknown devices with similar MAC address prefixes.
+
+The manufacturer was not identified.
+
+### How I Found Them
+
+I disconnected devices one by one and repeated the scan.
+
+I checked which MAC addresses disappeared.
+
+**Result:** The three unknown devices were the three smart bulbs in my lamp.
 
 ---
 
-### Results
-- Pi-hole working on my Mac, iPhone, and Samsung TV. During the first test on a news website, it blocked **15%** of requests (38 out of 250).
-- WireGuard VPN working over mobile data. My iPhone appears in Pi-hole as `10.8.0.2` and continues blocking trackers outside my home network.
-- Raspberry Pi with a static IP address (configured on the system itself and reserved on the router), active firewall, automatic updates, SSH key authentication, and backups.
-- The alert system successfully detected the TV the first time it connected and only sends one notification per new device.
-- Complete network inventory: the three mystery devices turned out to be **the three smart bulbs in a lamp**.
-- **Unresolved issue:** with the VPN enabled outside my home network, WhatsApp won't connect (all other apps work). Possible solutions to test: lowering the tunnel's MTU to 1280 or removing `::/0` from the phone's AllowedIPs (the tunnel only carries IPv4 traffic).
+## Results
 
-### Lessons learned
-- **Only open what's absolutely necessary.** For the VPN, I forwarded a single UDP port instead of using DMZ, which would have exposed the entire Raspberry Pi.
-- **Before creating or changing a configuration, check it first and then apply it** (`nmcli … show`, `sshd -t`, `grep -v PrivateKey`), and always have a way to undo the change. For example, don't close an SSH session until you've tested access from another terminal window.
-- **Never expose private keys.** Files are created with `umask 077`, and the private key line is hidden when reviewing a configuration.
-- **DNS explains many strange issues.** After switching to Pi-hole, the router's administration page stopped loading because only the router knew its hostname. I fixed it by adding a local DNS record and flushing the Mac's DNS cache.
-- **You need to understand your ISP's limitations:** shared public IPv4 addresses with assigned port ranges, and router settings hidden in less obvious menus.
-- **The MAC address manufacturer can help identify a device**, but it isn't always listed in the database. Sometimes the most reliable method is physical: unplug a device and see what disappears.
-- **Cheap smart home devices are a weak point in a home network.** Ideally, they should be isolated on a guest network.
-- **Network changes can take time to take effect.** The TV didn't appear in Pi-hole straight away, so you shouldn't assume a configuration has failed too quickly.
+### Pi-hole
+
+Pi-hole worked on my Mac, iPhone and Samsung TV.
+
+During a test on a news website, it blocked **38 out of 250 requests (15%)**.
+
+### WireGuard VPN
+
+The VPN worked using mobile data.
+
+My iPhone appeared in Pi-hole with the IP address `10.8.0.2`.
+
+Pi-hole continued blocking trackers when I was outside my home network.
+
+### Server Security
+
+The Raspberry Pi had:
+
+- A static IP address.
+- An active firewall.
+- Automatic security updates.
+- SSH key authentication.
+- Configuration backups.
+
+### Device Alerts
+
+The alert system detected my Samsung TV when it first connected.
+
+It sent one notification for the new device.
+
+### Network Inventory
+
+I identified all three unknown devices as smart bulbs.
+
+### Unresolved Problem
+
+WhatsApp did not connect when I used the VPN outside my home network.
+
+Other applications worked correctly.
+
+**Possible solutions to test:**
+
+- Change the VPN MTU to `1280`.
+- Remove `::/0` from the iPhone's `AllowedIPs` setting because the VPN only uses IPv4.
+
+This problem is still not solved.
+
+---
+
+## Lessons Learned
+
+### 1. Open Only the Ports You Need
+
+I opened only one UDP port for WireGuard.
+
+I did not use DMZ because it could expose more services on my Raspberry Pi to the internet.
+
+### 2. Check Settings Before Making Changes
+
+Before changing important settings, I learned to check the current configuration.
+
+Useful commands include:
+
+- `nmcli` — Check network settings.
+- `sshd -t` — Check SSH configuration.
+- `grep -v PrivateKey` — View configuration text without showing lines containing `PrivateKey`.
+
+I also learned to keep an SSH session open until I had tested the new connection from another terminal.
+
+### 3. Protect Private Keys
+
+Private keys must not be shared.
+
+I used `umask 077` to protect the key files.
+
+I also avoided showing private keys when checking configuration files.
+
+### 4. DNS Can Cause Connection Problems
+
+After changing my DNS settings to Pi-hole, I could not open my router's administration page.
+
+I solved the problem by adding a local DNS record and clearing my Mac's DNS cache.
+
+This helped me understand how DNS works on a home network.
+
+### 5. Understand Your Internet Provider
+
+My provider uses shared public IPv4 addresses and gives customers specific port ranges.
+
+I had to understand this limitation to configure WireGuard correctly.
+
+### 6. MAC Addresses Do Not Always Identify Devices
+
+A MAC address can help identify a device, but the manufacturer is not always available.
+
+In my case, disconnecting devices one by one helped me find the three smart bulbs.
+
+### 7. Smart Devices Need Extra Attention
+
+Smart home devices can create security risks.
+
+Using a separate guest network can help keep these devices away from other devices on the main network.
+
+### 8. Network Changes Can Take Time
+
+My Samsung TV did not appear in Pi-hole immediately.
+
+I learned to wait and check the configuration before deciding that something was wrong.
+
+---
+
+## Conclusion
+
+In this project, I built and configured my own Raspberry Pi home security server.
+
+I used Pi-hole to block ads and trackers, WireGuard to connect to my home network, and UFW to control network connections.
+
+I also created a system to detect unknown devices and send alerts to my phone.
+
+This project helped me improve my practical skills in Linux, networking, DNS, VPNs and basic system security.
+
+I also learned how to solve configuration problems and document my work step by step.
