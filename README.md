@@ -8,8 +8,8 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/elenalucero"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge" alt="LinkedIn"></a>
-  <a href="https://tryhackme.com"><img src="https://img.shields.io/badge/TryHackMe-0D1117?style=for-the-badge&logo=tryhackme&logoColor=3EC6D6" alt="TryHackMe"></a>
-  <a href="https://app.hackthebox.com"><img src="https://img.shields.io/badge/Hack_The_Box-0D1117?style=for-the-badge&logo=hackthebox&logoColor=3EC6D6" alt="Hack The Box"></a>
+  <a href="https://tryhackme.com/p/khalehna"><img src="https://img.shields.io/badge/TryHackMe-0D1117?style=for-the-badge&logo=tryhackme&logoColor=3EC6D6" alt="TryHackMe"></a>
+  <a href="https://profile.hackthebox.com/profile/01a16a77-2ac1-721e-bb9f-c6ea88efcc8f"><img src="https://img.shields.io/badge/Hack_The_Box-0D1117?style=for-the-badge&logo=hackthebox&logoColor=3EC6D6" alt="Hack The Box"></a>
   <a href="https://github.com/khalehna/cybersecurity-portfolio"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Portfolio"></a>
 </p>
 
@@ -47,8 +47,8 @@ mindset   : Started by caring for people, now I protect them online.
 
 | Lab | What I did |
 |---|---|
-| **Metasploitable2 lab** | Isolated network in UTM with Kali + Metasploitable2 |
-| **Home Lab · Raspberry Pi** | Pi-hole + WireGuard VPN for my own devices |
+| [**Metasploitable2 lab**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/home-lab-metasploitable2.md) | Isolated network in UTM with Kali + Metasploitable2 |
+| [**Home Lab · Raspberry Pi**](https://github.com/khalehna/cybersecurity-portfolio/blob/main/raspberry-pi-pihole-vpn.md) | Pi-hole + WireGuard VPN for my own devices |
 
 <p align="right"><a href="https://github.com/khalehna/cybersecurity-portfolio">→ full write-ups in my portfolio</a></p>
 
@@ -73,6 +73,10 @@ Digital illustration · Procreate
 ```
 
 <br>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=khalehna&label=VISITORS&color=0D1117&style=for-the-badge" alt="Visitors">
+</p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=110&section=footer" width="100%" alt="footer">
