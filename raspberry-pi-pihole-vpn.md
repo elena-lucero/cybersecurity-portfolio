@@ -56,7 +56,7 @@
 
 ```mermaid
 flowchart LR
-  PHONE["iPhone · mobile data<br/>VPN IP 10.8.0.2"] -->|"UDP 20000"| ROUTER
+  PHONE["iPhone · mobile data<br/>VPN IP 10.8.0.2"] -->|"UDP external port"| ROUTER
   subgraph HOME["My home network"]
     ROUTER["Bbox router<br/>192.168.1.254"] -->|"UDP 51820"| PI
     PI["Raspberry Pi 5 · 192.168.1.158<br/>Pi-hole · WireGuard · UFW"]
@@ -176,7 +176,7 @@ I opened only one UDP port on my router:
 
 | External port | Internal port | Destination |
 |:-:|:-:|---|
-| `20000` | `51820` | Raspberry Pi |
+| `<external port>` | `51820` | Raspberry Pi |
 
 My internet provider shares public IPv4 addresses between customers. Because of this, my router only accepted external ports between `16384` and `24575`.
 
