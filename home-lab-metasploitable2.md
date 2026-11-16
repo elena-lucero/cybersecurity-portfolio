@@ -1,12 +1,20 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=170&section=header&text=Metasploitable2%20Lab&fontSize=42&fontColor=F0F6FC&fontAlignY=38&desc=LAB%2001%20%C2%B7%20Isolated%20practice%20network&descSize=16&descAlignY=60&descColor=F0F6FC" width="100%" alt="Metasploitable2 Lab">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:126E7A,100:3EC6D6&height=200&section=header&text=Metasploitable2%20Lab&fontSize=46&fontColor=F0F6FC&fontAlignY=36&desc=Isolated%20practice%20network&descSize=17&descAlignY=58&descColor=F0F6FC&animation=fadeIn" width="100%" alt="Metasploitable2 Lab">
 </p>
 
 <p align="center">
-  <a href="https://github.com/elena-lucero/cybersecurity-portfolio"><img src="https://img.shields.io/badge/%E2%86%90_Back_to_portfolio-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Back to portfolio"></a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=800&color=3EC6D6&center=true&vCenter=true&width=560&lines=%24+.%2Fstart_lab.sh;Kali+LAB+%E2%86%94+Metasploitable2;network%3A+host-only+%C2%B7+isolated" alt="Typing SVG">
 </p>
 
-<p align="center"><code>UTM</code> <code>Kali Linux</code> <code>Metasploitable2</code> <code>Host-only network</code></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/LAB-01-3EC6D6?style=for-the-badge&labelColor=0D1117" alt="Lab 01">
+  <img src="https://img.shields.io/badge/ENV-UTM-3EC6D6?style=for-the-badge&labelColor=0D1117" alt="Environment: UTM">
+  <img src="https://img.shields.io/badge/NETWORK-ISOLATED-3EC6D6?style=for-the-badge&labelColor=0D1117" alt="Network: isolated">
+</p>
+
+<p align="center">
+  <a href="https://github.com/elena-lucero/cybersecurity-portfolio"><b>← Back to portfolio</b></a>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
