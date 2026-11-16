@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/khalehna"><img src="https://img.shields.io/badge/%E2%86%90_Back_to_profile-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Back to profile"></a>
+  <a href="https://github.com/elena-lucero"><img src="https://img.shields.io/badge/%E2%86%90_Back_to_profile-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Back to profile"></a>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
