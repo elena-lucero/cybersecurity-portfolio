@@ -7,9 +7,13 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/LAB-01-3EC6D6?style=for-the-badge&labelColor=0D1117" alt="Lab 01">
-  <img src="https://img.shields.io/badge/ENV-UTM-3EC6D6?style=for-the-badge&labelColor=0D1117" alt="Environment: UTM">
-  <img src="https://img.shields.io/badge/NETWORK-ISOLATED-3EC6D6?style=for-the-badge&labelColor=0D1117" alt="Network: isolated">
+  <img src="https://img.shields.io/badge/UTM-0D1117?style=for-the-badge" alt="UTM">
+  <img src="https://img.shields.io/badge/QEMU-0D1117?style=for-the-badge&logo=qemu&logoColor=3EC6D6" alt="QEMU">
+  <img src="https://img.shields.io/badge/Homebrew-0D1117?style=for-the-badge&logo=homebrew&logoColor=3EC6D6" alt="Homebrew">
+  <img src="https://img.shields.io/badge/Kali_Linux-0D1117?style=for-the-badge&logo=kalilinux&logoColor=3EC6D6" alt="Kali Linux">
+  <img src="https://img.shields.io/badge/Metasploitable2-0D1117?style=for-the-badge" alt="Metasploitable2">
+  <img src="https://img.shields.io/badge/Nmap-0D1117?style=for-the-badge" alt="Nmap">
+  <img src="https://img.shields.io/badge/Netcat-0D1117?style=for-the-badge" alt="Netcat">
 </p>
 
 <p align="center">
