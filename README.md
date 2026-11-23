@@ -1,10 +1,11 @@
 
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=180&section=header&text=Cybersecurity%20Portfolio&fontSize=44&fontColor=F0F6FC&fontAlignY=38&desc=Hands-on%20labs%20%C2%B7%20Blue%20Team&descSize=17&descAlignY=60&descColor=F0F6FC" width="100%" alt="Cybersecurity Portfolio">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:3EC6D6&height=180&section=header&text=Cybersecurity%20Portfolio&fontSize=44&fontColor=F0F6FC&fontAlignY=38&desc=Hands-on%20labs%20%C2%B7%20Projects%20%C2%B7%20Blue%20Team&descSize=17&descAlignY=60&descColor=F0F6FC" width="100%" alt="Cybersecurity Portfolio">
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=900&color=3EC6D6&center=true&vCenter=true&width=520&lines=%24+ls+.%2Flabs+.%2Fprojects;Built+and+documented+by+me;Learning+by+doing" alt="Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=900&color=3EC6D6&center=true&vCenter=true&width=520&lines=%24+ls+.%2Flabs+.%2Fprojects;Learning+by+doing;Learning+by+understanding" alt="Typing SVG">
 </p>
 
 <p align="center">
@@ -12,6 +13,8 @@
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+
+## `$ ls ./labs`
 
 <table>
   <tr>
@@ -30,26 +33,32 @@
       <p align="center"><a href="raspberry-pi-pihole-vpn.md"><b>Open lab →</b></a></p>
     </td>
   </tr>
-  <tr>
-    <td colspan="2" valign="top">
-      <p align="center"><sub><code>PROJECT 01</code></sub></p>
-      <h3 align="center">vulneria.</h3>
-      <p align="center">An interactive visual dictionary of cybersecurity threats. Learn how digital attacks work through step-by-step simulations, technical explanations, and prevention and detection strategies.</p>
-      <p align="center"><i>Don't memorize it. Understand it.</i></p>
-      <p align="center"><code>Cybersecurity</code> <code>Interactive Simulations</code> <code>Threat Analysis</code></p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Work_in_Progress-0D1117?style=flat-square&logo=github&logoColor=3EC6D6" alt="Work in progress">
-      </p>
-      <p align="center"><a href="vulneria/README.md"><b>Open project →</b></a></p>
-    </td>
-  </tr>
 </table>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
+## `$ ls ./projects`
+
+<p align="center"><sub><code>PROJECT 01 · IN DEVELOPMENT</code></sub></p>
+
+<h2 align="center">vulneria.</h2>
+
+<p align="center">Interactive visual dictionary of cybersecurity threats.</p>
+
+<p align="center"><i>Don't memorize it. Understand it.</i></p>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3EC6D6,100:0D1117&height=110&section=footer" width="100%" alt="footer">
+  <code>Interactive Simulations</code>
+  <code>Threat Analysis</code>
+  <code>Blue Team</code>
 </p>
 
+<p align="center">
+  <a href="vulneria/README.md"><b>Explore project →</b></a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+
+<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3EC6D6,100:0D1117&height=110&section=footer" width="100%" alt="footer">
 </p>
