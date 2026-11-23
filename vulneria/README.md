@@ -36,11 +36,32 @@
 
 ## `$ cat about.txt`
 
-Vulneria was born from a personal need to visualize cybersecurity threats in an interactive way. While studying cybersecurity, I realized that reading definitions was not always enough to fully understand how attacks work.
+## About the project
 
-The main goal of Vulneria is to make digital threats easier to understand through interactive visualizations, technical explanations, and prevention and detection strategies.
+Vulneria was born from a personal need. When I started studying cybersecurity, I came from a completely different professional background. I needed a tool that would help me visualize and understand the technical terms I was learning for the first time.
 
-This is not a cybersecurity lab or a demonstration of programming skills. It is purely an educational contribution to the cybersecurity community.
+I couldn't find a tool that offered the visual and interactive learning experience I was looking for, so I decided to create one myself.
+
+Building Vulneria has also been a learning experience. Researching threats, understanding their mechanisms, and deciding how to represent them visually has helped me develop my own cybersecurity knowledge.
+
+I hope Vulneria can help other people who are changing careers or starting their cybersecurity journey, as well as professionals who need a quick reference or an educational resource to recommend to others.
+
+## My contribution
+
+Vulneria was developed using AI-assisted tools. My contribution focuses on:
+
+- Project concept and educational approach.
+- Visual identity and interface design.
+- User experience and functional design.
+- Content organization and technical research.
+- Design of interactive learning experiences.
+- Technical review and validation.
+
+This project is not intended to demonstrate programming skills, but to contribute an accessible and useful educational resource to the cybersecurity community.
+
+**Don't memorize it. Understand it.**
+
+*Visualize how digital threats work.*
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
