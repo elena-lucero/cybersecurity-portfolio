@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Cybersecurity-0D1117?style=for-the-badge&logo=hackthebox&logoColor=3EC6D6" alt="Cybersecurity">
-  <img src="https://img.shields.io/badge/Interactive_Learning-0D1117?style=for-the-badge&logoColor=3EC6D6" alt="Interactive Learning">
-  <img src="https://img.shields.io/badge/Threat_Analysis-0D1117?style=for-the-badge&logoColor=3EC6D6" alt="Threat Analysis">
-  <img src="https://img.shields.io/badge/Work_in_Progress-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Work in progress">
+  <img src="https://img.shields.io/badge/Cybersecurity-0D1117?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTEyIDIgNCA1djZjMCA1LjIgMy40IDkuNSA4IDExIDQuNi0xLjUgOC01LjggOC0xMVY1eiIgZmlsbD0iIzNFQzZENiIvPjwvc3ZnPg%3D%3D" alt="Cybersecurity">
+  <img src="https://img.shields.io/badge/Interactive_Learning-0D1117?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTUgMnYxOGw0LjYtNC40IDMgNi40IDMtMS40LTMtNi4zSDE5eiIgZmlsbD0iIzNFQzZENiIvPjwvc3ZnPg%3D%3D" alt="Interactive Learning">
+  <img src="https://img.shields.io/badge/Threat_Analysis-0D1117?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iNi41IiBmaWxsPSJub25lIiBzdHJva2U9IiMzRUM2RDYiIHN0cm9rZS13aWR0aD0iMi44Ii8%2BPHBhdGggZD0iTTE1IDE1bDYuNSA2LjUiIHN0cm9rZT0iIzNFQzZENiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4%3D" alt="Threat Analysis">
+  <img src="https://img.shields.io/badge/Work_in_Progress-0D1117?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTUgMmgxNHYyaC0xLjV2My41TDEzLjUgMTJsNCA0LjVWMjBIMTl2Mkg1di0yaDEuNXYtMy41bDQtNC41LTQtNC41VjRINXoiIGZpbGw9IiMzRUM2RDYiLz48L3N2Zz4%3D" alt="Work in progress">
 </p>
 
 <p align="center">
