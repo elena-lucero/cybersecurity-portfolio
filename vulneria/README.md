@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:126E7A,100:3EC6D6&height=200&section=header&text=vulneria.&fontSize=46&fontColor=F0F6FC&fontAlignY=36&desc=Interactive%20visual%20dictionary%20of%20cybersecurity%20threats&descSize=17&descAlignY=58&descColor=F0F6FC&animation=fadeIn" width="100%" alt="vulneria.">
 </p>
@@ -15,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/elena-lucero/cybersecurity-portfolio"><b>← Back to portfolio</b></a>
+  <a href="https://elena-lucero.github.io/"><b>← Back to portfolio</b></a>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
@@ -36,19 +35,17 @@
 
 ## `$ cat about.txt`
 
-## About the project
-
-Vulneria was born from a personal need. When I started studying cybersecurity, I came from a completely different professional background. I needed a tool that would help me visualize and understand the technical terms I was learning for the first time.
+vulneria was born from a personal need. When I started studying cybersecurity, I came from a completely different professional background. I needed a tool that would help me visualize and understand the technical terms I was learning for the first time.
 
 I couldn't find a tool that offered the visual and interactive learning experience I was looking for, so I decided to create one myself.
 
-Building Vulneria has also been a learning experience. Researching threats, understanding their mechanisms, and deciding how to represent them visually has helped me develop my own cybersecurity knowledge.
+Building vulneria has also been a learning experience. Researching threats, understanding their mechanisms, and deciding how to represent them visually has helped me develop my own cybersecurity knowledge.
 
-I hope Vulneria can help other people who are changing careers or starting their cybersecurity journey, as well as professionals who need a quick reference or an educational resource to recommend to others.
+I hope vulneria can help other people who are changing careers or starting their cybersecurity journey, as well as professionals who need a quick reference or an educational resource to recommend to others.
 
-## My contribution
+### My contribution
 
-Vulneria was developed using AI-assisted tools. My contribution focuses on:
+vulneria was developed using AI-assisted tools. My contribution focuses on:
 
 - Project concept and educational approach.
 - Visual identity and interface design.
@@ -69,7 +66,7 @@ This project is not intended to demonstrate programming skills, but to contribut
 
 I believe that understanding how something works is more useful than simply memorizing its definition.
 
-Instead of relying only on written explanations or static images, Vulneria uses interactive simulations to show how digital threats work, step by step.
+Instead of relying only on written explanations or static images, vulneria uses interactive simulations to show how digital threats work, step by step.
 
 The idea is to observe how connections are established, how data moves, how systems become compromised, and how security mechanisms can help prevent or detect attacks.
 
@@ -93,10 +90,10 @@ flowchart LR
 | Category | Description |
 |---|---|
 | **Attacks** | Techniques used to compromise systems, networks or users |
+| **Incidents** | Real cybersecurity incidents and historical attacks |
 | **Malware** | Malicious software and its behavior |
 | **Vectors** | Methods used to deliver threats or gain initial access |
 | **Vulnerabilities** | Weaknesses that can be exploited |
-| **Incidents** | Real cybersecurity incidents and historical attacks |
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
@@ -129,8 +126,6 @@ Multilingual content is currently under development.
 
 ## `$ cat development.txt`
 
-The application was developed using AI-assisted tools. My contribution focuses on the concept, visual design, content organization, and technical review.
-
 The project is currently under development. Interactive simulations are being created progressively, with a focus on technical accuracy, accessibility and visual clarity.
 
 All simulations are educational representations. They do not perform real attacks against external systems.
@@ -153,7 +148,7 @@ All simulations are educational representations. They do not perform real attack
 
 ## `$ cat motivation.txt`
 
-Vulneria is part of my own cybersecurity learning journey, and I hope it can also help others along theirs.
+vulneria is part of my own cybersecurity learning journey, and I hope it can also help others along theirs.
 
 <p align="center">
   <b>Don't memorize it. Understand it.</b>
