@@ -28,52 +28,38 @@
 | **Started** | November 2026 |
 | **Type** | Interactive educational web application |
 | **Focus** | Cybersecurity threats and attack mechanisms |
-| **Goal** | Learning through visual understanding |
 | **Status** | Work in progress |
 | **Development** | AI-assisted |
-| **Security audit** | Planned before public release |
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat about.txt`
 
-vulneria was born from a personal need. When I started studying cybersecurity, I came from a completely different professional background. I needed a tool that would help me visualize and understand the technical terms I was learning for the first time.
+vulneria was born from a personal need. When I started studying cybersecurity, I came from a completely different professional background. I needed a tool that would help me visualize and understand the technical concepts I was learning.
 
 I couldn't find a tool that offered the visual and interactive learning experience I was looking for, so I decided to create one myself.
 
-Building vulneria has also been a learning experience. Researching threats, understanding their mechanisms, and deciding how to represent them visually has helped me develop my own cybersecurity knowledge.
+Building vulneria is also part of my own learning journey. Researching threats and finding ways to represent them visually helps me develop my technical knowledge.
 
-I hope vulneria can help other people who are changing careers or starting their cybersecurity journey, as well as professionals who need a quick reference or an educational resource to recommend to others.
+I hope this project can help students, people changing careers and cybersecurity professionals looking for an educational resource or a quick reference.
 
 ### My contribution
 
-I lead the project with AI-assisted development. My contribution includes:
+I lead the project with AI-assisted development, focusing on:
 
-- Project concept and educational approach.
-- Visual identity and interface design.
-- Interface structure and functional design.
-- User experience and accessibility.
+- Project concept, educational approach and visual identity.
+- Interface structure, functionality and user experience.
 - Content organization and technical research.
-- Design of interactive learning experiences.
-- Technical review and content correction.
-- Functional testing and error identification.
-- Management of corrections and improvements.
+- Interactive simulation design.
+- Technical review, functional testing and error correction.
 
-This project is not intended to demonstrate programming skills, but to contribute an accessible and useful educational resource to the cybersecurity community.
-
-**Don't memorize it. Understand it.**
-
-*Visualize how digital threats work.*
+My goal is to create an accessible and useful educational resource for the cybersecurity community.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat learning_method.txt`
 
-I believe that understanding how something works is more useful than simply memorizing its definition.
-
-Instead of relying only on written explanations or static images, vulneria uses interactive simulations to show how digital threats work, step by step.
-
-The idea is to observe how connections are established, how data moves, how systems become compromised, and how security mechanisms can help prevent or detect attacks.
+vulneria goes beyond traditional definitions. It uses interactive simulations to explain how threats work, how systems become compromised and how attacks can be prevented or detected.
 
 ```mermaid
 flowchart LR
@@ -87,6 +73,8 @@ flowchart LR
   class A,B,C,D node
   class E final
 ```
+
+All simulations are educational representations. They do not perform real attacks against external systems.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
@@ -104,18 +92,13 @@ flowchart LR
 
 ## `$ cat features.txt`
 
-The project is designed around the following features:
-
-- Interactive, step-by-step attack simulations.
-- Animated connections, data packets and system states.
-- Technical definitions and explanations.
-- Comparisons between similar threats.
+- Interactive, step-by-step animated simulations.
+- Technical definitions, comparisons and analysis.
 - Prevention and detection strategies.
-- Technical analysis of attack mechanisms.
-- Alphabetical navigation and category filters.
-- Intelligent search and related terms.
-- Audio explanations.
-- Multilingual support.
+- Trusted technical references and related terms.
+- Intelligent search and category filters.
+- Audio narration and multilingual support.
+- Desktop and mobile experience.
 
 <p align="center">
   <img src="https://img.shields.io/badge/English-0D1117?style=flat-square&labelColor=126E7A" alt="English">
@@ -125,90 +108,43 @@ The project is designed around the following features:
   <img src="https://img.shields.io/badge/German-0D1117?style=flat-square&labelColor=126E7A" alt="German">
 </p>
 
-Multilingual content is currently under development.
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
-
-## `$ cat development.txt`
-
-The project is currently under development. Interactive simulations are being created progressively, with a focus on technical accuracy, accessibility and visual clarity.
-
-All simulations are educational representations. They do not perform real attacks against external systems.
+Interactive simulations and multilingual content are currently under development.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat security_audit.txt`
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Security_Audit-Planned-126E7A?style=flat-square&labelColor=0D1117" alt="Security audit planned">
-  <img src="https://img.shields.io/badge/Hardening-Planned-126E7A?style=flat-square&labelColor=0D1117" alt="Hardening planned">
-</p>
+Before the public release, I plan to perform a security audit of vulneria, including source code review, vulnerability assessment, hardening and penetration testing in a controlled environment.
 
-Before publishing vulneria, I want to do a security audit of my own web application.
+I will document the findings, security measures, corrections and test results as a separate project in my cybersecurity portfolio.
 
-First, I will review the source code and look for possible vulnerabilities. Then, I will perform security tests in a controlled environment to identify weaknesses.
-
-After that, I will apply security measures, fix the problems and test the application again to make sure the corrections work.
-
-### Planned security activities
-
-- Source code security review.
-- Attack surface analysis.
-- Vulnerability assessment.
-- External dependency review.
-- Repository and access security.
-- Application hardening.
-- Penetration testing in a controlled environment.
-- Vulnerability remediation and retesting.
-- Security documentation.
-- Security monitoring and maintenance after release.
-
-```mermaid
-flowchart LR
-  A["Audit"] --> B["Identify"]
-  B --> C["Assess"]
-  C --> D["Protect"]
-  D --> E["Retest"]
-  E --> F["Document"]
-
-  classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
-  classDef final fill:#126E7A,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
-  class A,B,C,D,E node
-  class F final
-```
-
-I will document the entire process, including the vulnerabilities I find, the tools I use and the security measures I apply.
-
-This security audit will be documented as a separate project in my cybersecurity portfolio, connected to vulneria.
+This phase will help me put my cybersecurity knowledge into practice.
 
 **I don't just want to create a website about cybersecurity. I also want to learn how to protect it.**
-
-The security audit has not started yet. It is a required phase before the public release.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat roadmap.txt`
 
-- [x] Project concept and visual identity
-- [x] Dictionary structure and categories
-- [x] Search and filtering system
+- [x] Concept and visual identity
+- [x] Structure and core functionality
 - [x] Technical content organization
-- [ ] Complete interactive simulations
-- [ ] Complete multilingual translations
+- [ ] Interactive simulations
+- [ ] Multilingual content
 - [ ] Final technical review and testing
 - [ ] Security audit and vulnerability assessment
-- [ ] Hardening and penetration testing
-- [ ] Vulnerability remediation and retesting
+- [ ] Hardening, penetration testing and remediation
 - [ ] Public release
 - [ ] Security monitoring and maintenance
 
-
-## `$ cat motivation.txt`
-
-vulneria is part of my own cybersecurity learning journey, and I hope it can also help others along theirs.
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 <p align="center">
   <b>Don't memorize it. Understand it.</b>
+</p>
+
+<p align="center">
+  <i>Visualize how digital threats work.</i>
 </p>
 
 <p align="center">
