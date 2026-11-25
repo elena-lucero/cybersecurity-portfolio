@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:126E7A,100:3EC6D6&height=200&section=header&text=vulneria.&fontSize=46&fontColor=F0F6FC&fontAlignY=36&desc=Interactive%20visual%20dictionary%20of%20cybersecurity%20threats&descSize=17&descAlignY=58&descColor=F0F6FC&animation=fadeIn" width="100%" alt="vulneria.">
 </p>
@@ -30,6 +31,7 @@
 | **Goal** | Learning through visual understanding |
 | **Status** | Work in progress |
 | **Development** | AI-assisted |
+| **Security audit** | Planned before public release |
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
@@ -45,14 +47,17 @@ I hope vulneria can help other people who are changing careers or starting their
 
 ### My contribution
 
-vulneria was developed using AI-assisted tools. My contribution focuses on:
+I lead the project with AI-assisted development. My contribution includes:
 
 - Project concept and educational approach.
 - Visual identity and interface design.
-- User experience and functional design.
+- Interface structure and functional design.
+- User experience and accessibility.
 - Content organization and technical research.
 - Design of interactive learning experiences.
-- Technical review and validation.
+- Technical review and content correction.
+- Functional testing and error identification.
+- Management of corrections and improvements.
 
 This project is not intended to demonstrate programming skills, but to contribute an accessible and useful educational resource to the cybersecurity community.
 
@@ -132,17 +137,113 @@ All simulations are educational representations. They do not perform real attack
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
+## `$ cat security_audit.txt`
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Security_Audit-Planned-126E7A?style=flat-square&labelColor=0D1117" alt="Security audit planned">
+  <img src="https://img.shields.io/badge/Hardening-Planned-126E7A?style=flat-square&labelColor=0D1117" alt="Hardening planned">
+</p>
+
+Before publishing vulneria, I want to do a security audit of my own web application.
+
+First, I will review the source code and look for possible vulnerabilities. Then, I will perform security tests in a controlled environment to identify weaknesses.
+
+After that, I will apply security measures, fix the problems and test the application again to make sure the corrections work.
+
+### Planned security activities
+
+- Source code security review.
+- Attack surface analysis.
+- Vulnerability assessment.
+- External dependency review.
+- Repository and access security.
+- Application hardening.
+- Penetration testing in a controlled environment.
+- Vulnerability remediation and retesting.
+- Security documentation.
+- Security monitoring and maintenance after release.
+
+```mermaid
+flowchart LR
+  A["Audit"] --> B["Identify"]
+  B --> C["Assess"]
+  C --> D["Protect"]
+  D --> E["Retest"]
+  E --> F["Document"]
+
+  classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
+  classDef final fill:#126E7A,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
+  class A,B,C,D,E node
+  class F final
+```
+
+I will document the entire process, including the vulnerabilities I find, the tools I use and the security measures I apply.
+
+This security audit will be documented as a separate project in my cybersecurity portfolio, connected to vulneria.
+
+**I don't just want to create a website about cybersecurity. I also want to learn how to protect it.**
+
+The security audit has not started yet. It is a required phase before the public release.
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+
 ## `$ cat roadmap.txt`
 
-- [x] Project concept and visual identity
+### Phase 01 — Concept and design
+
+- [x] Project concept and educational approach
+- [x] Visual identity
+- [x] Interface design
+
+### Phase 02 — Structure and functionality
+
 - [x] Dictionary structure and categories
 - [x] Search and filtering system
+- [x] Navigation and interactive controls
+- [x] Desktop and mobile interface structure
+
+### Phase 03 — Content and interactive simulations
+
 - [x] Technical content organization
 - [ ] Complete interactive simulations
-- [ ] Complete multilingual translations
-- [ ] Technical review and testing
-- [ ] Mobile experience improvements
-- [ ] Public release
+- [ ] Expand the threat dictionary
+- [ ] Complete technical references
+- [ ] Final technical review and functional testing
+
+### Phase 04 — Multilingual support
+
+- [x] Multilingual interface
+- [ ] Complete content translations
+- [ ] Complete multilingual simulations and audio explanations
+- [ ] Language consistency review
+
+### Phase 05 — Security audit and hardening
+
+- [ ] Source code security review
+- [ ] Attack surface analysis
+- [ ] Vulnerability assessment
+- [ ] External dependency review
+- [ ] Repository and access security
+- [ ] Application hardening
+- [ ] Controlled penetration testing
+- [ ] Vulnerability remediation
+- [ ] Security retesting
+- [ ] Independent security audit documentation
+
+### Phase 06 — Public release
+
+- [ ] Final desktop and mobile testing
+- [ ] Final accessibility review
+- [ ] Review security audit results
+- [ ] Public deployment
+
+### Phase 07 — Monitoring and maintenance
+
+- [ ] Security monitoring
+- [ ] Vulnerability and dependency reviews
+- [ ] Bug fixes and security updates
+- [ ] Content updates and new threats
+- [ ] Continuous improvements
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
