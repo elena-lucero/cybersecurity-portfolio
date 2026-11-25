@@ -189,63 +189,19 @@ The security audit has not started yet. It is a required phase before the public
 
 ## `$ cat roadmap.txt`
 
-### Phase 01 — Concept and design
-
-- [x] Project concept and educational approach
-- [x] Visual identity
-- [x] Interface design
-
-### Phase 02 — Structure and functionality
-
+- [x] Project concept and visual identity
 - [x] Dictionary structure and categories
 - [x] Search and filtering system
-- [x] Navigation and interactive controls
-- [x] Desktop and mobile interface structure
-
-### Phase 03 — Content and interactive simulations
-
 - [x] Technical content organization
 - [ ] Complete interactive simulations
-- [ ] Expand the threat dictionary
-- [ ] Complete technical references
-- [ ] Final technical review and functional testing
+- [ ] Complete multilingual translations
+- [ ] Final technical review and testing
+- [ ] Security audit and vulnerability assessment
+- [ ] Hardening and penetration testing
+- [ ] Vulnerability remediation and retesting
+- [ ] Public release
+- [ ] Security monitoring and maintenance
 
-### Phase 04 — Multilingual support
-
-- [x] Multilingual interface
-- [ ] Complete content translations
-- [ ] Complete multilingual simulations and audio explanations
-- [ ] Language consistency review
-
-### Phase 05 — Security audit and hardening
-
-- [ ] Source code security review
-- [ ] Attack surface analysis
-- [ ] Vulnerability assessment
-- [ ] External dependency review
-- [ ] Repository and access security
-- [ ] Application hardening
-- [ ] Controlled penetration testing
-- [ ] Vulnerability remediation
-- [ ] Security retesting
-- [ ] Independent security audit documentation
-
-### Phase 06 — Public release
-
-- [ ] Final desktop and mobile testing
-- [ ] Final accessibility review
-- [ ] Review security audit results
-- [ ] Public deployment
-
-### Phase 07 — Monitoring and maintenance
-
-- [ ] Security monitoring
-- [ ] Vulnerability and dependency reviews
-- [ ] Bug fixes and security updates
-- [ ] Content updates and new threats
-- [ ] Continuous improvements
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat motivation.txt`
 
