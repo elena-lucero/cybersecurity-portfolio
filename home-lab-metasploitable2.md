@@ -292,9 +292,6 @@ I gained practical experience in building an isolated lab, performing network sc
 
 The main lesson was that a serious security vulnerability does not always require a complex attack. A single unauthenticated service running with elevated privileges can put an entire system at risk.
 
-<p align="center">
-  <i>Learning by doing. Learning by understanding.</i>
-</p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3EC6D6,100:0D1117&height=110&section=footer" width="100%" alt="footer">
