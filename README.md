@@ -15,15 +15,18 @@
 
 ## `$ cat about.md`
 
+
 This repository documents my learning journey in cybersecurity through hands-on labs and personal projects.
 
 My goal is to put theory into practice, develop my technical skills and build a deeper understanding of cybersecurity.
 
 Each lab and project is part of my continuous learning process, with a focus on understanding, experimentation and documentation.
 
+
 <p align="center">
   <i>Learning by doing. Learning by understanding.</i>
 </p>
+
 
 <p align="center">
   <a href="https://elena-lucero.github.io/"><img src="https://img.shields.io/badge/Explore_my_portfolio-0D1117?style=for-the-badge&logo=github&logoColor=3EC6D6" alt="Explore my portfolio"></a>
