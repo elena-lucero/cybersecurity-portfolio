@@ -398,9 +398,5 @@ This project helped me develop practical skills in Linux administration, network
 I learned how to configure network services, apply security controls, automate monitoring and investigate unknown devices in a real home environment.
 
 <p align="center">
-  <i>Learning by doing. Learning by understanding.</i>
-</p>
-
-<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3EC6D6,100:0D1117&height=110&section=footer" width="100%" alt="footer">
 </p>
