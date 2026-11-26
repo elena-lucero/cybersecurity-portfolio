@@ -1,9 +1,10 @@
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:126E7A,100:3EC6D6&height=200&section=header&text=Raspberry%20Pi%20Home%20Lab&fontSize=44&fontColor=F0F6FC&fontAlignY=36&desc=Pi-hole%20%C2%B7%20WireGuard%20VPN%20%C2%B7%20Home%20security%20server&descSize=17&descAlignY=58&descColor=F0F6FC&animation=fadeIn" width="100%" alt="Raspberry Pi Home Lab">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:126E7A,100:3EC6D6&height=200&section=header&text=Raspberry%20Pi%20Home%20Lab&fontSize=44&fontColor=F0F6FC&fontAlignY=36&desc=DNS%20Filtering%20%C2%B7%20VPN%20%C2%B7%20Network%20Monitoring&descSize=17&descAlignY=58&descColor=F0F6FC&animation=fadeIn" width="100%" alt="Raspberry Pi Home Lab">
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=800&color=3EC6D6&center=true&vCenter=true&width=560&lines=%24+ssh+%3Cuser%3E%40%3Craspberry-name%3E.local;Pi-hole+%2B+WireGuard+VPN;firewall+%C2%B7+alerts+%C2%B7+backups" alt="Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=800&color=3EC6D6&center=true&vCenter=true&width=560&lines=%24+ssh+%3Cuser%3E%40%3Chostname%3E.local;Pi-hole+%2B+WireGuard+VPN;firewall+%C2%B7+monitoring+%C2%B7+alerts" alt="Typing SVG">
 </p>
 
 <p align="center">
@@ -21,34 +22,24 @@
 
 ## `$ cat overview.txt`
 
+In this project, I built a Raspberry Pi home server to practise Linux administration, networking, DNS filtering, secure remote access and basic network monitoring.
+
 | | |
 |---|---|
-| **Date** | October 25, 2026 |
-| **Goal** | Build my own home server with a Raspberry Pi 5 |
-| **Environment** | My own home network and my own devices |
-| **Equipment** | Raspberry Pi 5 (1 GB), case, fan, heatsinks, 27 W power supply, 64 GB microSD card, MacBook Air, Bouygues Telecom Bbox Wi-Fi 6 router |
+| **Date** | 25 October 2026 |
+| **Environment** | Personal home network |
+| **Hardware** | Raspberry Pi 5 (1 GB RAM), 64 GB microSD |
+| **Operating system** | Raspberry Pi OS Lite (64-bit) |
+| **Authorization** | Personal network and devices |
 
-**My main goals:**
+### Objectives
 
-- Block ads and trackers on my devices with Pi-hole.
-- Set up a personal VPN to connect safely when I am away from home.
-- Make the server more secure with a firewall, automatic updates and SSH keys.
-- Get an alert when an unknown device connects to my network.
+- Filter unwanted DNS requests using Pi-hole.
+- Configure secure remote access using WireGuard.
+- Apply basic server hardening measures.
+- Monitor the local network and receive alerts when unknown devices appear.
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
-
-## `$ cat tools.txt`
-
-| Category | Tools & Technologies |
-|---|---|
-| Hardware | Raspberry Pi 5 (1 GB), MacBook Air, Bbox Wi-Fi 6 Router |
-| Operating System | Raspberry Pi OS Lite (64-bit) |
-| System Setup | Raspberry Pi Imager, NetworkManager, `nmcli` |
-| DNS & Ad Blocking | Pi-hole, Quad9, StevenBlack Blocklist |
-| VPN & Networking | WireGuard, `iptables`, `qrencode` |
-| System Security | UFW, SSH, SSH Keys, unattended-upgrades |
-| Network Monitoring | arp-scan, Cron, ntfy |
-| Backup & Administration | `scp`, Pi-hole Teleporter, Linux command line |
+Network addresses and personal configuration details have been anonymized for privacy.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
@@ -56,112 +47,118 @@
 
 ```mermaid
 flowchart LR
-  PHONE["iPhone · mobile data<br/>VPN IP 10.8.0.2"] -->|"UDP external port"| ROUTER
-  subgraph HOME["My home network"]
-    ROUTER["Bbox router<br/>192.168.1.254"] -->|"UDP 51820"| PI
-    PI["Raspberry Pi 5 · 192.168.1.158<br/>Pi-hole · WireGuard · UFW"]
-    MAC["Mac"] -.->|"DNS"| PI
-    TV["Samsung TV"] -.->|"DNS"| PI
+  PHONE["Remote device"] -->|"Encrypted VPN tunnel"| ROUTER
+  subgraph HOME["Home network"]
+    ROUTER["Router"] -->|"UDP port forwarding"| PI
+    PI["Raspberry Pi 5<br/>Pi-hole · WireGuard · UFW"]
+    MAC["Computer"] -.->|"DNS"| PI
+    TV["Smart TV"] -.->|"DNS"| PI
+    IOT["IoT devices"] -.->|"ARP discovery"| PI
   end
-  PI -->|"DNS"| Q9["Quad9"]
-  PI -->|"alerts"| NTFY["ntfy · my phone"]
+  PI -->|"Upstream DNS"| Q9["Quad9"]
+  PI -->|"Notifications"| NTFY["ntfy"]
   classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
-  class PHONE,ROUTER,PI,MAC,TV,Q9,NTFY node
+  class PHONE,ROUTER,PI,MAC,TV,IOT,Q9,NTFY node
   style HOME fill:transparent,stroke:#3EC6D6,stroke-dasharray:4 4,color:#3EC6D6
 ```
 
+| Function | Tools |
+|---|---|
+| System administration | Linux, SSH, NetworkManager |
+| DNS filtering | Pi-hole, Quad9, StevenBlack |
+| Remote access | WireGuard, iptables |
+| Server security | UFW, SSH keys, unattended-upgrades |
+| Network monitoring | arp-scan, Cron, ntfy |
+| Configuration backups | SCP, Pi-hole Teleporter |
+
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
-## `$ cat 01_raspberry_setup.txt`
+## `$ cat implementation.txt`
 
-- I put the Raspberry Pi inside its case and installed the fan.
-- I could only install one small heatsink, because the others were too close to the fan.
-- I installed **Raspberry Pi OS Lite (64-bit)** with Raspberry Pi Imager. I chose this version because it does not need a desktop.
-- I turned on SSH and connected the Raspberry Pi to my router with an Ethernet cable.
-- Then I connected from my Mac and updated the system:
+### 01 · Raspberry Pi setup
+
+I installed Raspberry Pi OS Lite using Raspberry Pi Imager. I selected the Lite version because the server does not need a graphical desktop.
+
+I enabled SSH, connected the Raspberry Pi to my router through Ethernet and updated the system from my Mac.
 
 ```bash
-ssh <user>@<raspberry-name>.local
+ssh <user>@<hostname>.local
 sudo apt update && sudo apt full-upgrade -y
 sudo reboot
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+### 02 · DNS filtering with Pi-hole
 
-## `$ cat 02_pihole.txt`
-
-I installed Pi-hole to block ads and trackers with DNS.
+I installed Pi-hole to filter DNS requests and block domains associated with ads and trackers.
 
 ```bash
 curl -sSL https://install.pi-hole.net | bash
 sudo pihole setpassword
 ```
 
-| Setting | Value |
+| Setting | Configuration |
 |---|---|
-| **DNS provider** | Quad9 (filtered, with DNSSEC) |
-| **Blocklist** | StevenBlack, about 71,000 domains |
-| **Devices** | Mac, iPhone and Samsung TV |
+| Upstream DNS | Quad9 |
+| Blocklist | StevenBlack |
+| Blocklist size at setup | Approximately 71,000 domains |
+| Client configuration | Manual DNS settings |
 
-I changed the DNS settings by hand on these devices, to use the IP address of my Raspberry Pi. I did not change the DNS for the whole network.
+I configured my computer, smartphone and smart TV to use the Raspberry Pi as their DNS server.
 
-> **Problem: the router page did not open**
-> After I started using Pi-hole, I could not open the settings page of my router. The router used a local name that Pi-hole did not know.
->
-> **Solution:** I added a local DNS record in Pi-hole, `mabbox.bytel.fr → 192.168.1.254`, and I cleared the DNS cache on my Mac. After this, the router page opened again.
+I did not change the DNS configuration for the entire network.
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+Pi-hole filters DNS requests. It does not replace a firewall, antivirus or endpoint protection solution.
 
-## `$ cat 03_static_ip.txt`
+### 03 · Static IP configuration
 
-I wanted my Raspberry Pi to always keep the same IP address, so I set a static IP with NetworkManager:
+I configured a static IP address using NetworkManager to keep the DNS and VPN services available at a consistent network address.
 
 ```bash
-sudo nmcli connection modify "Wired connection 1" ipv4.method manual \
-  ipv4.addresses 192.168.1.158/24 ipv4.gateway 192.168.1.254 \
+sudo nmcli connection modify "Wired connection 1" \
+  ipv4.method manual \
+  ipv4.addresses "<raspberry-ip>/24" \
+  ipv4.gateway "<router-ip>" \
   ipv4.dns "9.9.9.9 149.112.112.112"
+
 sudo nmcli connection up "Wired connection 1"
 ```
 
-I also reserved the same IP address on my router, with the MAC address of the Raspberry Pi.
+I also reserved the same address on my router using the Raspberry Pi's MAC address.
 
-**Result:** the Raspberry Pi uses `192.168.1.158`.
+### 04 · WireGuard VPN
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
-
-## `$ cat 04_wireguard_vpn.txt`
-
-I installed WireGuard to reach my home network when I am away. I set it up by hand, without automatic installation tools.
+I installed and configured WireGuard manually, without an automatic VPN installation tool.
 
 ```bash
 sudo apt install -y wireguard qrencode iptables
 ```
 
-**Security keys**
+The configuration included:
 
-I created separate keys for the server and for my iPhone. Only root can read the private keys.
+- Separate public and private keys for the server and client.
+- Restricted permissions for private key files using `umask 077`.
+- A dedicated VPN subnet.
+- IPv4 forwarding and NAT.
+- UDP port forwarding on the router.
+- Pi-hole as the DNS server for the VPN client.
 
-```bash
-sudo sh -c 'umask 077; cd /etc/wireguard; wg genkey | tee servidor.key | wg pubkey > servidor.pub; wg genkey | tee iphone.key | wg pubkey > iphone.pub'
-```
-
-**Server configuration:** `/etc/wireguard/wg0.conf`
+**Server configuration — `/etc/wireguard/wg0.conf`**
 
 ```ini
 [Interface]
 Address = 10.8.0.1/24
 ListenPort = 51820
-PrivateKey = <server private key>
+PrivateKey = <server-private-key>
+
 PostUp = iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
 PostDown = iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
 
 [Peer]
-# iPhone
-PublicKey = <iPhone public key>
+PublicKey = <client-public-key>
 AllowedIPs = 10.8.0.2/32
 ```
 
-I turned on IP forwarding and started WireGuard:
+I enabled IPv4 forwarding and started the VPN service.
 
 ```bash
 echo 'net.ipv4.ip_forward=1' | sudo tee /etc/sysctl.d/99-wireguard.conf
@@ -170,148 +167,239 @@ sudo systemctl enable --now wg-quick@wg0
 sudo wg show
 ```
 
-**Router port forwarding**
+I configured one UDP port forwarding rule on my router and imported the client configuration into my smartphone using a QR code.
 
-I opened only one UDP port on my router:
+The VPN client uses `10.8.0.1` as its DNS server, allowing Pi-hole filtering outside my home network.
 
-| External port | Internal port | Destination |
-|:-:|:-:|---|
-| `<external port>` | `51820` | Raspberry Pi |
-
-My internet provider shares public IPv4 addresses between customers. Because of this, my router only accepted external ports between `16384` and `24575`.
-
-**iPhone configuration**
-
-- I made a QR code with `qrencode` to add the VPN to my iPhone.
-- I set `DNS = 10.8.0.1`, so my iPhone uses Pi-hole when I am away from home.
-- I turned on automatic VPN connection with mobile data and with Wi-Fi networks outside my home.
+The VPN addresses shown here are example addresses. Private keys, public IP addresses and external port details are not published.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
-## `$ cat 05_server_security.txt`
+## `$ cat security.txt`
 
-**SSH keys:** I created an SSH key on my Mac. I kept password login as a backup.
+I applied basic server hardening measures to reduce unnecessary exposure and improve system security.
+
+### SSH authentication
+
+I configured SSH key authentication using Ed25519.
 
 ```bash
 ssh-keygen -t ed25519 -C "mac"
-ssh-copy-id <user>@<raspberry-name>.local
+ssh-copy-id <user>@<hostname>.local
 ```
 
-**Automatic updates:** I installed automatic security updates and checked that both settings were on (`1`).
+Password authentication remained enabled as a backup.
+
+### Automatic security updates
+
+I installed `unattended-upgrades` and verified that automatic updates were enabled.
 
 ```bash
 sudo apt install -y unattended-upgrades
 cat /etc/apt/apt.conf.d/20auto-upgrades
 ```
 
-**Firewall (UFW):** it blocks incoming connections by default. I only allowed the ports that my services need.
+### Firewall
+
+I configured UFW to deny incoming connections by default and allow outgoing connections.
 
 ```bash
 sudo apt install -y ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow 22/tcp comment 'SSH'
-sudo ufw allow 53 comment 'Pi-hole DNS'
-sudo ufw allow 80/tcp comment 'Pi-hole panel'
-sudo ufw allow 5353/udp comment 'mDNS (.local)'
-sudo ufw allow 51820/udp comment 'WireGuard'
-sudo ufw route allow in on wg0 out on eth0 comment 'VPN to internet'
+```
+
+I added rules for the services used by the server.
+
+| Port | Protocol | Purpose |
+|---|---|---|
+| 22 | TCP | SSH administration |
+| 53 | TCP/UDP | DNS resolution |
+| 80 | TCP | Pi-hole web interface |
+| 5353 | UDP | mDNS resolution |
+| 51820 | UDP | WireGuard VPN |
+
+I also allowed traffic forwarding from the VPN interface to the Ethernet interface.
+
+```bash
+sudo ufw route allow in on wg0 out on eth0
 sudo ufw enable
 sudo ufw status verbose
 ```
 
-**Backups:** I saved my Pi-hole settings with **Settings → Teleporter**, and I copied the `/etc/wireguard` folder to my Mac with `scp`.
+Only the WireGuard service was configured for port forwarding on the router.
+
+UFW protects the Raspberry Pi itself. It does not act as a firewall for every device on the home network.
+
+### Configuration backups
+
+| Component | Backup method |
+|---|---|
+| Pi-hole | Teleporter |
+| WireGuard | SCP |
+
+I saved copies of the service configurations on my Mac. Backup restoration was not tested during this project.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
-## `$ cat 06_device_alerts.txt`
+## `$ cat network_monitoring.txt`
 
-I made a system that finds unknown devices on my network:
+### Unknown device detection
 
-| Tool | What it does |
+I configured a basic monitoring system to discover unknown devices on my local network and send notifications to my phone.
+
+| Tool | Function |
 |---|---|
-| **arp-scan** | Finds the devices connected to the local network |
-| **Cron** | Runs the script every five minutes |
-| **ntfy** | Sends notifications to my phone |
+| arp-scan | Discover devices on the local network |
+| Cron | Run scheduled scans every five minutes |
+| ntfy | Send notifications |
 
-The script compares the MAC addresses it finds with a list of known devices. If it finds a new MAC address, it saves the information and sends an alert.
+```mermaid
+flowchart TD
+  A["Scheduled network scan"] --> B["Collect MAC addresses"]
+  B --> C["Compare with known devices"]
+  C --> D{"Unknown MAC address?"}
+  D -->|No| E["Continue monitoring"]
+  D -->|Yes| F["Record device information"]
+  F --> G["Send notification"]
+  G --> E
+  classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
+  class A,B,C,D,E,F,G node
+```
+
+The monitoring script compares discovered MAC addresses with a list of known devices.
 
 ```bash
 sudo apt install -y arp-scan cron
 sudo arp-scan --localnet --quiet --plain
+```
+
+I scheduled the script to run every five minutes using Cron.
+
+```bash
 echo '*/5 * * * * root /usr/local/bin/alarma-intrusos.sh' | sudo tee /etc/cron.d/alarma-intrusos
 ```
 
-**Result:** the system found my Samsung TV the first time it connected, and it sent only one notification.
+**Test result:** The system detected my smart TV when it first appeared and sent one notification.
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+This is a basic device discovery and notification system, not a complete intrusion detection system (IDS).
 
-## `$ cat 07_network_inventory.txt`
+An unknown MAC address does not automatically indicate malicious activity.
 
-I used arp-scan to check the devices on my network:
+### Network inventory investigation
+
+During a network scan, I discovered three unknown devices with similar MAC address prefixes and no identified manufacturer.
 
 ```bash
-cd /tmp && sudo arp-scan --localnet
+sudo arp-scan --localnet
 ```
 
-The scan showed IP addresses, MAC addresses and, when available, the manufacturer. I found **three unknown devices** with similar MAC address prefixes, and with no manufacturer.
+I investigated the devices manually.
 
-**How I found them:** I disconnected my devices one by one, repeated the scan and checked which MAC addresses disappeared.
+```mermaid
+flowchart TD
+  A["Three unknown MAC addresses"] --> B["Disconnect devices one by one"]
+  B --> C["Repeat network scans"]
+  C --> D["Compare MAC addresses"]
+  D --> E["Identify three smart bulbs"]
+  classDef node fill:#0D1117,stroke:#3EC6D6,stroke-width:1px,color:#F0F6FC
+  class A,B,C,D,E node
+```
 
-**Result:** the three unknown devices were the three smart bulbs in my lamp.
+**Result:** All three unknown devices were identified as smart bulbs.
+
+This investigation helped me understand the importance of maintaining a network inventory and verifying unknown devices before considering them a security threat.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat results.txt`
 
-| Area | Result |
+<p align="center">
+  <img src="https://img.shields.io/badge/DNS_requests_blocked-15.2%25-126E7A?style=for-the-badge" alt="DNS filtering result">
+  <img src="https://img.shields.io/badge/Unknown_devices_identified-3-126E7A?style=for-the-badge" alt="Devices identified">
+  <img src="https://img.shields.io/badge/Scan_interval-5_min-126E7A?style=for-the-badge" alt="Scan interval">
+</p>
+
+| Component | Observed result |
 |---|---|
-| **Pi-hole** | Worked on my Mac, iPhone and Samsung TV. On a news website test, it blocked **38 of 250 requests (15%)** |
-| **WireGuard VPN** | Worked with mobile data. My iPhone appeared in Pi-hole as `10.8.0.2`, and Pi-hole kept blocking trackers outside my home |
-| **Server security** | Static IP, active firewall, automatic security updates, SSH keys and configuration backups |
-| **Device alerts** | Found my Samsung TV when it first connected, with one notification |
-| **Network inventory** | All three unknown devices were smart bulbs |
+| **Pi-hole** | Blocked 38 of 250 DNS requests during one website test (15.2%) |
+| **WireGuard** | Remote connection verified using mobile data |
+| **Remote DNS filtering** | Pi-hole continued filtering DNS requests through the VPN |
+| **Server security** | Firewall, SSH keys and automatic updates configured |
+| **Device alerts** | Smart TV detected and notification received |
+| **Network inventory** | Three unknown devices successfully identified |
+| **Backups** | Pi-hole and WireGuard configurations saved |
+
+The DNS blocking percentage represents one specific test, not the general effectiveness of Pi-hole.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
-## `$ cat open_issue.txt`
+## `$ cat troubleshooting.txt`
 
-WhatsApp did not connect when I used the VPN outside my home network. Other apps worked well.
+### DNS resolution
 
-**Possible solutions to test:**
+**Problem:** The router administration page became unavailable after configuring Pi-hole.
 
-- Change the VPN MTU to `1280`.
-- Remove `::/0` from `AllowedIPs` on the iPhone, because the VPN only uses IPv4.
+**Cause:** Pi-hole could not resolve the local hostname used by the router.
 
-**Status:** not solved yet.
+**Solution:** I added a local DNS record pointing to the router's private IP address and cleared the DNS cache on my Mac.
+
+**Status:** Resolved.
+
+### VPN port forwarding
+
+**Problem:** My internet provider uses shared public IPv4 addresses and restricts the available external ports.
+
+**Solution:** I selected an external UDP port within the assigned range and forwarded it to the WireGuard service.
+
+**Status:** Remote VPN access verified.
+
+### WhatsApp connectivity
+
+**Problem:** WhatsApp did not connect when using the VPN outside my home network, while other applications worked.
+
+Possible causes to investigate:
+
+- VPN MTU configuration.
+- IPv6 routing configuration.
+
+Possible tests include reducing the MTU to `1280` and reviewing the IPv6 routes in the client configuration.
+
+**Status:** Unresolved at the time of the original project.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
 
 ## `$ cat lessons_learned.txt`
 
-1. **Open only the ports you need.** I opened only one UDP port for WireGuard. I did not use DMZ, because it could show more services of my Raspberry Pi to the internet.
-2. **Check settings before you change them.** Before I change important settings, I check the current configuration:
-   - `nmcli`: check the network settings.
-   - `sshd -t`: check the SSH configuration.
-   - `grep -v PrivateKey`: show a configuration file without the lines with `PrivateKey`.
+- The importance of DNS resolution and consistent network addressing.
+- How to configure an encrypted VPN tunnel manually.
+- How IP forwarding, NAT and port forwarding work together.
+- The importance of limiting exposed network services.
+- How to protect private keys and configure SSH key authentication.
+- How to automate network discovery and notifications.
+- How to investigate and identify unknown network devices.
+- The importance of testing configuration changes before closing an active SSH session.
 
-   I also keep my SSH session open until I test the new connection from another terminal.
-3. **Protect private keys.** Never share private keys. I used `umask 077` to protect the key files, and I did not show private keys when I checked configuration files.
-4. **DNS can cause connection problems.** With Pi-hole as DNS, my router page did not open. A local DNS record and a clean DNS cache on my Mac solved it. This helped me understand how DNS works on a home network.
-5. **Understand your internet provider.** My provider shares public IPv4 addresses and gives each customer a port range. I had to understand this to set up WireGuard correctly.
-6. **MAC addresses do not always identify devices.** A MAC address can help, but the manufacturer is not always known. Disconnecting devices one by one helped me find the three smart bulbs.
-7. **Smart devices need extra attention.** Smart home devices can be a security risk. A separate guest network can keep them away from the other devices on the main network.
-8. **Network changes can take time.** My Samsung TV did not appear in Pi-hole at once. I learned to wait and check the configuration before I decide that something is wrong.
+### Future improvements
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:3EC6D6,100:0D1117&height=2" width="100%" alt="">
+The following measures have not been implemented or tested as part of this project:
 
-## `$ cat conclusion.txt`
+- Disable SSH password authentication after verifying key-based access.
+- Restrict firewall rules by source address and network interface.
+- Separate IoT devices from the main network.
+- Test backup restoration.
+- Improve device monitoring and reduce false alerts.
+- Investigate the remaining VPN connectivity issue.
 
-In this project I built and configured my own home security server with a Raspberry Pi.
+### Conclusion
 
-I used Pi-hole to block ads and trackers, WireGuard to connect to my home network, and UFW to control network connections. I also made a system that finds unknown devices and sends alerts to my phone.
+This project helped me develop practical skills in Linux administration, networking and basic system security.
 
-This project helped me improve my practical skills in Linux, networking, DNS, VPNs and basic system security. I also learned to solve configuration problems and to document my work step by step.
+I learned how to configure network services, apply security controls, automate monitoring and investigate unknown devices in a real home environment.
+
+<p align="center">
+  <i>Learning by doing. Learning by understanding.</i>
+</p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3EC6D6,100:0D1117&height=110&section=footer" width="100%" alt="footer">
